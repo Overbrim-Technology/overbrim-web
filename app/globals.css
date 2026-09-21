@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Marcellus';
+  src: url('/fonts/Marcellus-Regular.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Nexa Heavy';
+  src: url('/fonts/Nexa-Heavy.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Nexa Light';
+  src: url('/fonts/Nexa-Light.ttf') format('truetype');
+  font-display: swap;
+  font-weight: 300;
+}
+
+:root {
+  --font-marcellus: 'Marcellus', Georgia, 'Times New Roman', serif;
+  --font-nexa-heavy: 'Nexa Heavy', sans-serif;
+  --font-nexa-light: 'Nexa Light', sans-serif;
+  --color-teal-50: #f5f1e8;
+  --color-teal-200: #dfd0b1;
+  --color-teal-300: #cdb78a;
+  --color-teal-500: #ad8b51;
+  --color-teal-600: #98783f;
+  --color-teal-700: #806333;
+  --color-teal-800: #604a28;
+  --color-teal-900: #45351f;
+  --color-slate-50: #f5f3ee;
+  --color-slate-100: #ebe8df;
+  --color-slate-200: #d8d4c9;
+  --color-slate-300: #beb9ad;
+  --color-slate-400: #9b978e;
+  --color-slate-500: #78756e;
+  --color-slate-600: #625f59;
+  --color-slate-700: #4b4944;
+  --color-slate-800: #343331;
+  --color-slate-900: #242321;
+  --color-slate-950: #141414;
+  --color-white: #fffdf8;
+}
+
+.font-marcellus { font-family: var(--font-marcellus), serif; }
+.font-nexa-heavy { font-family: var(--font-nexa-heavy); }
+.font-nexa-light { font-family: var(--font-nexa-light); }
+
+.bg-\[\#e5f0ec\] { background-color: #ebe8df !important; }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f3f0e9; color: #242321; }

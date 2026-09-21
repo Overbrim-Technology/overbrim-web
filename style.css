@@ -74,6 +74,7 @@ body {
 }
 
 .glow-button {
+  border-radius: 12px;
   box-shadow: 0 16px 30px rgba(0, 0, 0, .15);
 }
 
@@ -101,6 +102,7 @@ body {
   background: rgba(255,255,255,.95);
   box-shadow: 0 28px 80px rgba(15,23,42,.08);
   overflow: hidden;
+  border-radius: 24px;
   transition: transform .35s ease, box-shadow .35s ease, border .35s ease;
   border: 1px solid rgba(15,23,42,.05);
 }
@@ -112,6 +114,7 @@ body {
 
 .service-image {
   transition: transform .45s ease, filter .45s ease, box-shadow .45s ease;
+  border-radius: 24px;
 }
 
 .service-image:hover {
