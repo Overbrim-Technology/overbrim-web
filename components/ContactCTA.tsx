@@ -23,7 +23,8 @@ export function ContactCTA() {
           </div>
         </div>
 
-        <form action="mailto:overbrimhq@gmail.com" method="post" encType="text/plain" className="grid gap-5 bg-white p-6 text-slate-900 sm:grid-cols-2 sm:p-8">
+        <form action="https://formspree.io/f/meaogzwq" method="POST" className="grid gap-5 bg-white p-6 text-slate-900 sm:grid-cols-2 sm:p-8">
+          <input type="hidden" name="_subject" value="New Overbrim partnership enquiry" />
           <div>
             <label htmlFor="name" className="mb-2 block text-sm font-semibold">Name</label>
             <input id="name" name="name" type="text" required className="w-full border border-slate-300 bg-slate-50 px-4 py-3 outline-none transition focus:border-teal-700" />
@@ -37,7 +38,7 @@ export function ContactCTA() {
             <textarea id="message" name="message" rows={5} required className="w-full resize-y border border-slate-300 bg-slate-50 px-4 py-3 outline-none transition focus:border-teal-700" />
           </div>
           <div className="sm:col-span-2 sm:flex sm:items-center sm:justify-between sm:gap-6">
-            <p className="text-xs leading-5 text-slate-500">Submitting opens your email client with your message ready to send.</p>
+            <p className="text-xs leading-5 text-slate-500">Your enquiry will be sent securely to the Overbrim team.</p>
             <button type="submit" className="mt-4 w-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-teal-700 sm:mt-0 sm:w-auto">Send enquiry <span aria-hidden="true">→</span></button>
           </div>
         </form>
