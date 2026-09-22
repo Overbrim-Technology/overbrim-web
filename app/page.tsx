@@ -40,7 +40,7 @@ function HeroSection() {
       <div className="absolute -right-32 -top-40 h-[30rem] w-[30rem] rounded-full border-[70px] border-teal-700/10" />
       <div id="about" className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-20 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:pb-32 lg:pt-28">
         <div className="relative z-10 max-w-3xl">
-          <p className="mb-7 font-nexa-heavy text-xs uppercase tracking-[0.28em] text-teal-700">One partner. Three growth engines.</p>
+          <p className="mb-7 font-nexa-heavy text-xs uppercase tracking-[0.28em] text-teal-700">Strategic Partner For Your Organization & Brand.</p>
           <h1 className="font-marcellus text-5xl leading-[1.05] text-slate-950 sm:text-6xl lg:text-8xl">Build, Train, and Scale with Overbrim.</h1>
           <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">We are your strategic partner for digital growth. From full-stack engineering and expert AI model training to dedicated virtual assistance, we bring the technology and talent to accelerate your business.</p>
           <div className="mt-10 flex flex-wrap gap-4">
