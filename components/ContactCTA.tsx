@@ -1,3 +1,6 @@
+'use client';
+
+import { FormEvent, useState } from 'react';
 import Link from 'next/link';
 
 const contactLinks = [
@@ -7,6 +10,36 @@ const contactLinks = [
 ];
 
 export function ContactCTA() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionStatus('idle');
+
+    try {
+      const response = await fetch('https://formspree.io/f/meaogzwq', {
+        method: 'POST',
+        body: new FormData(event.currentTarget),
+        headers: {
+          Accept: 'application/json',
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Form submission failed');
+      }
+
+      event.currentTarget.reset();
+      setSubmissionStatus('success');
+    } catch {
+      setSubmissionStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section id="contact" className="bg-teal-800 text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[.9fr_1.1fr] lg:px-8 lg:py-28">
@@ -23,7 +56,7 @@ export function ContactCTA() {
           </div>
         </div>
 
-        <form action="https://formspree.io/f/meaogzwq" method="POST" className="grid gap-5 bg-white p-6 text-slate-900 sm:grid-cols-2 sm:p-8">
+        <form onSubmit={handleSubmit} className="grid gap-5 bg-white p-6 text-slate-900 sm:grid-cols-2 sm:p-8">
           <input type="hidden" name="_subject" value="New Overbrim partnership enquiry" />
           <div>
             <label htmlFor="name" className="mb-2 block text-sm font-semibold">Name</label>
@@ -38,8 +71,14 @@ export function ContactCTA() {
             <textarea id="message" name="message" rows={5} required className="w-full resize-y border border-slate-300 bg-slate-50 px-4 py-3 outline-none transition focus:border-teal-700" />
           </div>
           <div className="sm:col-span-2 sm:flex sm:items-center sm:justify-between sm:gap-6">
-            <p className="text-xs leading-5 text-slate-500">Your enquiry will be sent securely to the Overbrim team.</p>
-            <button type="submit" className="mt-4 w-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-teal-700 sm:mt-0 sm:w-auto">Send enquiry <span aria-hidden="true">→</span></button>
+            <div aria-live="polite" className="text-xs leading-5 text-slate-500">
+              {submissionStatus === 'success' && <p className="text-teal-700">Thank you. Your enquiry has been sent to the Overbrim team.</p>}
+              {submissionStatus === 'error' && <p className="text-red-700">Something went wrong. Please try again or email us directly.</p>}
+              {submissionStatus === 'idle' && <p>Your enquiry will be sent securely to the Overbrim team.</p>}
+            </div>
+            <button type="submit" disabled={isSubmitting} className="mt-4 w-full bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-teal-700 disabled:cursor-not-allowed disabled:opacity-60 sm:mt-0 sm:w-auto">
+              {isSubmitting ? 'Sending...' : 'Send enquiry'} <span aria-hidden="true">→</span>
+            </button>
           </div>
         </form>
       </div>
