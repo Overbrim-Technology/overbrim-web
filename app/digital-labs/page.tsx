@@ -1,5 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ContactCTA } from '../../components/ContactCTA';
+
+export const metadata: Metadata = {
+  title: 'Digital Labs | Digital Transformation and Academy Training | Overbrim',
+  description: 'Strategic software engineering, creative services, and industry-led digital training for individuals, juniors, and organizations.',
+  alternates: {
+    canonical: '/digital-labs',
+  },
+};
 
 const engineeringCapabilities = [
   ['Full-stack product development', 'Next.js, React, Node.js, and Java applications built around your users, workflows, and growth targets.'],

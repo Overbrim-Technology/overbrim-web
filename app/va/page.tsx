@@ -1,5 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ContactCTA } from '../../components/ContactCTA';
+
+export const metadata: Metadata = {
+  title: 'VA Hub | Strategic Virtual Assistance | Overbrim',
+  description: 'Find vetted virtual assistants for operational, administrative, and specialized work, or join the Overbrim VA talent network.',
+  alternates: {
+    canonical: '/va',
+  },
+};
 
 const partnerPoints = [
   ['Identify the drag', 'We map repetitive, administrative, and specialized work that is slowing your core team down.'],

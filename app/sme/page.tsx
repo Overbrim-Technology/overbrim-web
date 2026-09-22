@@ -1,5 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ContactCTA } from '../../components/ContactCTA';
+
+export const metadata: Metadata = {
+  title: 'SME Network | Expert AI Training Data Specialists | Overbrim',
+  description: 'Connect with vetted subject matter experts for accurate, contextual AI data annotation, evaluation, and model training.',
+  alternates: {
+    canonical: '/sme',
+  },
+};
 
 const organizationBenefits = [
   ['Quality assurance by design', 'Layered review, calibration, and feedback loops help every annotation set meet the quality bar your model requires.'],
