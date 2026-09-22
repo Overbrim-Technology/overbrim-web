@@ -4,7 +4,7 @@ import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'Overbrim | Build, Train, and Scale',
+  title: 'Overbrim | Strategic Partnership for Your Organization and Brand',
   description: 'Your strategic partner for digital growth, expert AI training, and virtual assistance.',
   metadataBase: new URL('https://overbrim.org'),
   alternates: {
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://overbrim.org',
     siteName: 'Overbrim',
-    title: 'Overbrim | Build, Train, and Scale',
+    title: 'Overbrim | Strategic Partnership for Your Organization and Brand',
     description: 'Your strategic partner for digital growth, expert AI training, and virtual assistance.',
     images: [{ url: '/images/overbrim-logo-2.PNG', alt: 'Overbrim logo' }],
   },
   twitter: {
     card: 'summary',
-    title: 'Overbrim | Build, Train, and Scale',
+    title: 'Overbrim | Strategic Partnership for Your Organization and Brand',
     description: 'Your strategic partner for digital growth, expert AI training, and virtual assistance.',
     images: ['/images/overbrim-logo-2.PNG'],
   },
