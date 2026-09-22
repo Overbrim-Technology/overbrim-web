@@ -16,6 +16,12 @@ const creativeServices = [
   ['Animation', 'Motion systems, explainers, and animated brand moments that give complex ideas a memorable shape.'],
 ];
 
+const academyAudiences = [
+  ['Individuals', 'Practical skills for people building confidence, changing direction, or advancing their digital careers.'],
+  ['Organizations', 'Focused learning for teams that need stronger digital capabilities, better systems, or shared ways of working.'],
+  ['Juniors', 'Accessible foundations and guided practice for young learners taking their first steps into technology.'],
+];
+
 function LabsHero() {
   return (
     <section className="relative overflow-hidden bg-slate-950 text-white">
@@ -62,9 +68,10 @@ function DigitalAcademy() {
         <div className="order-1 lg:order-2">
           <p className="font-nexa-heavy text-xs uppercase tracking-[0.28em] text-teal-700">02 / Digital Academy</p>
           <h2 className="mt-4 font-marcellus text-4xl leading-tight text-slate-950 sm:text-5xl">Skills that turn possibility into practice.</h2>
-          <p className="mt-6 font-nexa-light text-base leading-7 text-slate-600">TechUp bootcamps give individuals and teams a practical route into the digital economy. Our curriculums pair clear foundations with projects, coaching, and the habits needed to keep learning after the cohort ends.</p>
-          <div className="mt-8 flex flex-wrap gap-3">{['Prompt engineering', 'Operations management', 'Robotics'].map((track) => <span key={track} className="border border-teal-700/30 bg-white/60 px-4 py-2 font-nexa-heavy text-sm text-slate-800">{track}</span>)}</div>
-          <div className="mt-8 border-l-2 border-teal-600 pl-5"><p className="font-nexa-heavy text-sm text-slate-950">Special guest instructor tracks</p><p className="mt-2 font-nexa-light text-sm leading-6 text-slate-600">Our Copywriting and Social Media Management tracks are led by industry-leading special guest instructors who bring current practice into the classroom.</p></div>
+          <p className="mt-6 font-nexa-light text-base leading-7 text-slate-600">The Digital Academy serves three clear audiences: individuals, organizations, and juniors. We shape each learning experience around the learner, from bootcamps and one-to-one coaching to focused workshops and other practical sessions.</p>
+          <div className="mt-8 grid gap-3 sm:grid-cols-3">{academyAudiences.map(([title, description]) => <article key={title} className="border-t border-teal-700/40 pt-4"><h3 className="font-nexa-heavy text-sm text-slate-950">{title}</h3><p className="mt-2 font-nexa-light text-sm leading-6 text-slate-600">{description}</p></article>)}</div>
+          <div className="mt-8 flex flex-wrap gap-3">{['Prompt engineering (AI)', 'Web development', 'Data analysis', 'Social media management', 'Video editing', 'Graphic design', 'Animation', 'Others'].map((track) => <span key={track} className="border border-teal-700/30 bg-white/60 px-4 py-2 font-nexa-heavy text-sm text-slate-800">{track}</span>)}</div>
+          <div className="mt-8 border-l-2 border-teal-600 pl-5"><p className="font-nexa-heavy text-sm text-slate-950">Industry-led courses</p><p className="mt-2 font-nexa-light text-sm leading-6 text-slate-600">Every course is led by an industry-leading specialist who brings current practice, real experience, and practical insight into the classroom.</p></div>
         </div>
       </div>
     </section>

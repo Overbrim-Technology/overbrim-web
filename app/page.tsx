@@ -38,7 +38,7 @@ function HeroSection() {
       style={{ backgroundImage: "linear-gradient(90deg, rgba(243, 240, 233, 0.98) 0%, rgba(243, 240, 233, 0.9) 52%, rgba(243, 240, 233, 0.58) 100%), url('/images/hero-1.png')" }}
     >
       <div className="absolute -right-32 -top-40 h-[30rem] w-[30rem] rounded-full border-[70px] border-teal-700/10" />
-      <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-20 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:pb-32 lg:pt-28">
+      <div id="about" className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-20 lg:grid-cols-[1.15fr_.85fr] lg:px-8 lg:pb-32 lg:pt-28">
         <div className="relative z-10 max-w-3xl">
           <p className="mb-7 font-nexa-heavy text-xs uppercase tracking-[0.28em] text-teal-700">One partner. Three growth engines.</p>
           <h1 className="font-marcellus text-5xl leading-[1.05] text-slate-950 sm:text-6xl lg:text-8xl">Build, Train, and Scale with Overbrim.</h1>
@@ -48,7 +48,7 @@ function HeroSection() {
             <Link href="#network" className="rounded-full border border-slate-400 px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:border-teal-700 hover:text-teal-700">Explore Our Hubs <span aria-hidden="true">↗</span></Link>
           </div>
         </div>
-        <div id="about" className="relative flex min-h-64 items-end justify-end lg:min-h-0">
+        <div className="relative flex min-h-64 items-end justify-end lg:min-h-0">
           <div className="max-w-xs border-l-2 border-teal-600 pl-5 text-sm leading-6 text-slate-600">We connect ambitious organizations to the systems, specialists, and support that move meaningful work forward.</div>
         </div>
       </div>

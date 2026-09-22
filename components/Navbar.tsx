@@ -7,7 +7,7 @@ const links = [
   { label: 'Digital Labs', href: '/digital-labs' },
   { label: 'SME Network', href: '/sme' },
   { label: 'VA Hub', href: '/va' },
-  { label: 'About Overbrim', href: '#about' },
+  { label: 'About Overbrim', href: '/#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
