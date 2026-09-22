@@ -5,7 +5,7 @@ import { Navbar } from '../components/Navbar';
 
 export const metadata: Metadata = {
   title: 'Overbrim | Build, Train, and Scale',
-  description: 'A comprehensive partner for digital growth, expert AI training, and virtual assistance.',
+  description: 'A strategic partner for digital growth, expert AI training, and virtual assistance.',
   icons: {
     icon: '/images/overbrim-logo-2.PNG',
     apple: '/images/overbrim-logo-2.PNG',

@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 
 const links = [
@@ -9,9 +12,13 @@ const links = [
 ];
 
 export function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[#f7f8f5]/90 backdrop-blur-lg">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8" aria-label="Main navigation">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8" aria-label="Main navigation">
         <Link href="/" className="font-marcellus text-xl tracking-wide text-slate-950" aria-label="Overbrim home">
           Overbrim<span className="text-teal-700">.</span>
         </Link>
@@ -30,9 +37,37 @@ export function Navbar() {
             Join Our Network
           </Link>
         </div>
-        <Link href="#contact" className="rounded-full bg-teal-700 px-4 py-2 text-sm font-semibold text-white md:hidden">
-          Connect
-        </Link>
+        <div className="flex items-center gap-2 md:hidden">
+          <Link href="#contact" className="rounded-full bg-teal-700 px-4 py-2 text-sm font-semibold text-white">
+            Connect
+          </Link>
+          <button
+            type="button"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-full border border-slate-300 text-slate-800 transition hover:border-teal-700 hover:text-teal-700"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            onClick={() => setIsMenuOpen((open) => !open)}
+          >
+            <span className="h-px w-4 bg-current" />
+            <span className="h-px w-4 bg-current" />
+            <span className="h-px w-4 bg-current" />
+          </button>
+        </div>
+        {isMenuOpen && (
+          <div id="mobile-navigation" className="absolute left-6 right-6 top-full border-t border-slate-200 bg-[#f7f8f5] px-1 pb-3 shadow-lg lg:hidden">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={closeMenu}
+                className="block border-b border-slate-200/80 px-4 py-3.5 text-sm font-medium text-slate-700 transition-colors hover:text-teal-700"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
       </nav>
     </header>
   );

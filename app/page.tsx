@@ -42,7 +42,7 @@ function HeroSection() {
         <div className="relative z-10 max-w-3xl">
           <p className="mb-7 font-nexa-heavy text-xs uppercase tracking-[0.28em] text-teal-700">One partner. Three growth engines.</p>
           <h1 className="font-marcellus text-5xl leading-[1.05] text-slate-950 sm:text-6xl lg:text-8xl">Build, Train, and Scale with Overbrim.</h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">We are your comprehensive partner for digital growth. From full-stack engineering and expert AI model training to dedicated virtual assistance, we provide the technology and talent to accelerate your business.</p>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-600">We are your strategic partner for digital growth. From full-stack engineering and expert AI model training to dedicated virtual assistance, we bring the technology and talent to accelerate your business.</p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="#contact" className="rounded-full bg-teal-700 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-teal-800">Partner with Us</Link>
             <Link href="#network" className="rounded-full border border-slate-400 px-6 py-3.5 text-sm font-semibold text-slate-700 transition hover:border-teal-700 hover:text-teal-700">Explore Our Hubs <span aria-hidden="true">↗</span></Link>
